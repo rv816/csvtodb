@@ -2,8 +2,8 @@ import csv
 import dataset
 from normality import normalize
 from .sissy import StdoutToggle
-from .bar import EnhancedBar
-
+#from .bar import EnhancedBar
+from tqdm import tqdm
 def jsonify(csvlist, preheadings=None, heading_line = 0, data_start_line = 1):
     """
     Convert CSV into a JSON
