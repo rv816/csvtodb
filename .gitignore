@@ -1,7 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*$py.class
 
 # C extensions
 *.so
@@ -43,7 +42,6 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *,cover
-.hypothesis/
 
 # Translations
 *.mo
@@ -57,3 +55,20 @@ docs/_build/
 
 # PyBuilder
 target/
+
+<<<<<<< HEAD
+# Ryan Custom
+config.json
+*.swp
+*.xls*
+*.csv
+*.docx
+*.json
+*Resources*
+*ipynb_checkpoints*
+
+=======
+# OSX BS
+.DS_Store
+>>>>>>> 04a1dc1a5303faf314dddc7d1c8a5dbd3774b7b2
+*.db

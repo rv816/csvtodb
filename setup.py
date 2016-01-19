@@ -16,6 +16,7 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
 'dataset',
+'progress'
 ]
 
 test_requirements = [
@@ -24,7 +25,7 @@ test_requirements = [
 
 setup(
     name='csvtodb',
-    version='0.1.0',
+    version='0.1.1',
     description="Simplify importing data into a database",
     long_description=readme + '\n\n' + history,
     author="Ryan Vass",

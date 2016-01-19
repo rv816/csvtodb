@@ -1,6 +1,8 @@
 import csv
 import dataset
 from normality import normalize
+from .sissy import StdoutToggle
+from .bar import EnhancedBar
 
 def jsonify(csvlist, preheadings=None, heading_line = 0, data_start_line = 1):
     """
@@ -22,7 +24,14 @@ def upload_to_db(csv_as_list, tablename, db_url):
     db = dataset.connect(db_url)
     table = db[tablename]
     json_gen = jsonify(csv_as_list)
-    for x in json_gen:
+    sis = StdoutToggle()
+    sis.set_to_terminal()
+    for x in tqdm(json_gen):
+        print("Loading....")
         print(x)
+        print("\n")
+        print("\n")
+        
         table.insert(x)
+    sis.set_to_ipython()
     return table
